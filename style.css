@@ -1,0 +1,430 @@
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn.dark {
+  background: var(--dark-blue-color);
+}
+
+.btn.light {
+  background: var(--orange-color);
+}
+
+.btn.white {
+  background: #FFFFFF;
+  color: black;
+}
+
+.btn.enrol-icon::before {
+  content: url("images/enrol-now-icon.svg");
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.btn.enrol-icon {
+  padding-left: 60px;
+}
+
+/* Header */
+
+header {
+  background: linear-gradient(180deg, #2F364B 0%, #262B3D 85.25%);
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 0;
+  padding: 36px 0;
+  z-index: 100;
+  transition: all 500ms ease;
+}
+
+nav.scrolled {
+  background: var(--dark-color);
+  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  padding: 12px;
+}
+
+nav .logo {
+  font-family: "DM sans", sans-serif;
+  font-weight: 900px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  position: relative;
+  color: #fff;
+}
+
+.hero-section .left h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 125%;
+  margin-bottom: 0;
+}
+
+.hero-section .left p {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 200%;
+  margin-bottom: 30px;
+  width: 457px;
+}
+
+.hero-section .left {
+  flex: 1;
+}
+
+.hero-section .buynow img {
+  height: 90px;
+  vertical-align: middle;
+}
+
+.hero-section .right {
+  align-self: flex-end;
+}
+
+.hero-section .downloadnow h1 {
+  font-size: 20px;
+  margin-left: -510px;
+  margin-right: 10px;
+  margin-top: 280px;
+}
+
+
+.hero-section .positionimage p {
+  position: absolute;
+  font-style: float left;
+  font-size: 14px;
+  margin-bottom: -190px;
+  margin-left: -530px;
+  margin-top: 90px;
+}
+
+.hero-section .positionimage img {
+  height: 18px;
+  margin-left: 5px;
+}
+
+.hero-section .right img {
+  height: 520px;
+  vertical-align: middle;
+}
+
+.l2left{
+  margin: 30px;
+  -webkit-column-count: 2;
+  column-gap: 10px;
+  column-rule-width: 1px;
+  column-width: 100px;
+}
+
+.pl2{ 
+  margin-left: 72px;
+  color: #00BAC7;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+.headerl2{
+  margin-left: 70px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.column2{
+  margin: 30px;
+  font-size: 18px;
+}
+/* Courses Section */
+
+/*.courses-section {
+  background: #00BAC7;
+  padding: 70px 0;
+  padding-bottom: 120px;
+}
+*/
+.courses-section h2 {
+  text-align: center;
+ }
+
+.courses-section .course-cards {
+  display: flex;
+  gap: 80px;
+}
+
+.courses-section .course-cards img {
+  width: 100%;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  border-radius: 28px;
+}
+
+.courses-section .course-card p {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  color: rgba(39, 45, 62, 0.8);
+}
+
+.courses-section .course-card h3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 150%;
+
+  color: var(--dark-blue-color);
+}
+
+.courses-section .course-card .info {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courses-section .course-card .duration {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  font-size: 16px;w
+  line-height: 150%;
+  white-space: nowrap;
+  color: var(--dark-blue-color);
+  position: relative;
+  padding-left: 20px;
+}
+
+.courses-section .course-card .duration::before {
+  content: url("images/clock.svg");
+  position: absolute;
+  top: 2px;
+  left: -6px;
+}
+
+.courses-section .wrapper {
+  position: relative;
+}
+
+.courses-section .wrapper .btn {
+  position: absolute;
+  right: 0;
+}
+
+/* Kata Pengantar dari buku */
+.courses-section .books {
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 100px 130px;
+gap: 10px;
+
+width: 1439px;
+height: 720px;
+left: 0px;
+top: 2098px;
+}
+/* App Section */
+
+.app-section {
+  text-align: center;
+}
+
+.app-section .app-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 24px;
+}
+
+.app-section .app-btn {
+  padding: 16px 30px;
+  background: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 310px;
+}
+
+.app-section .app-btn span {
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+  background: var(--dark-color);
+  color: #fff;
+  margin-top: 100px;
+  padding: 70px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer h3 {
+  color: var(--orange-color);
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+footer ul li {
+  margin: 16px 0;
+}
+
+footer .links-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+
+footer .social {
+  margin-left: 20px;
+}
+
+footer .social a {
+  margin-right: 28px;
+}
+
+footer form {
+  margin-left: 20px;
+  margin-top: 16px;
+  position: relative;
+}
+
+footer form input {
+  font-family: "DM Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+  border-radius: 8px;
+  padding: 8px 160px 8px 32px;
+  border: none;
+  width: 100%;
+  color: #000000;
+}
+
+footer form .submit-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark-blue-color);
+  border-radius: 8px;
+  padding: 8px 32px;
+  border: 0;
+  font-family: "DM Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+footer .copyright {
+  margin-top: 36px;
+}
+
+nav.mobile-nav,
+.mobile-menu-container {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .btn {
+    padding: 12px 32px;
+  }
+
+  .wrapper {
+    padding: 0 100px;
+  }
+
+  nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 36px 100px;
+  }
+
+  nav.scrolled {
+    padding: 16px 100px;
+  }
